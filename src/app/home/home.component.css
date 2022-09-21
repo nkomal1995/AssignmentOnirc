@@ -1,0 +1,19 @@
+mat-grid-tile {
+    background: lightblue;
+  }
+
+  /* .example-card {
+    max-width: 200px;
+  } */
+
+  .example-card {
+    max-width: 200px;
+    margin-bottom: 8px;
+    display: inline-block;
+    width:400px;
+   
+             
+  }
+  .example-form-field{
+    margin-top: 20px;
+  }
