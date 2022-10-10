@@ -19,6 +19,10 @@ import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http'
 import {MatGridListModule} from '@angular/material/grid-list';
 import { FilterPipe } from './filter.pipe';
+import { NgxsModule } from '@ngxs/store';
+import { NgxsLoggerPluginModule } from '@ngxs/logger-plugin';
+import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
+import { EmployeeState } from './store/state/employee.state';
 
 @NgModule({
   declarations: [
@@ -43,7 +47,10 @@ import { FilterPipe } from './filter.pipe';
     MatCardModule,
     MatInputModule,
     HttpClientModule,
-    MatGridListModule
+    MatGridListModule,
+    NgxsModule.forRoot([EmployeeState]),
+    NgxsLoggerPluginModule.forRoot(),
+    NgxsReduxDevtoolsPluginModule.forRoot()
     
 
    
